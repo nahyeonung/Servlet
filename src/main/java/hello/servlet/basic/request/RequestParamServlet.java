@@ -17,6 +17,9 @@ public class RequestParamServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        /*
+        * req.getParameter 메서드는 GET 파라미터, POST 파라미터 모두 확인할 수 있다.
+        * */
         System.out.println("전체 파라미터 조회 [START]");
         Enumeration<String> parameterNames = req.getParameterNames();
         System.out.println("전체 파라미터 조회 [END]");
