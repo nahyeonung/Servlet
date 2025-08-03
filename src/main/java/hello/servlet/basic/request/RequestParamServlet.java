@@ -19,6 +19,7 @@ public class RequestParamServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         /*
         * req.getParameter 메서드는 GET 파라미터, POST 파라미터 모두 확인할 수 있다.
+        * 왜냐하면 GET, POST 둘 다 쿼리 파라미터 형식으로 데이터를 전달하기 때문이다. 차이점은 GET은 header로, POST는 body로 파라미터 전달.
         * */
         System.out.println("전체 파라미터 조회 [START]");
         Enumeration<String> parameterNames = req.getParameterNames();
